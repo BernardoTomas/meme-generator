@@ -4,20 +4,23 @@
 }
 
 #meme-image-container {
+  background-color: white;
+  border: 1px solid black;
   width: 400px;
+  height: 300px;
   position: relative;
 }
 
 .meme-image {
   z-index: 1;
-  width: inherit;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .meme-text {
   position: absolute;
   z-index: 2;
   max-width: 400px;
-  height: inherit;
   word-wrap: break-word;
 }
-
