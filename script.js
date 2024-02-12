@@ -14,7 +14,7 @@ const loadMemePreview = () => {
 
 const getMemeText = () => {
   textInput.addEventListener('keyup', () => {
-    memeText.innerText = textInput.value;
+    memeText.innerHTML = `<h2>${textInput.value}</h2>`;
   });
 };
 
