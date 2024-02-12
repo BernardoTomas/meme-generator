@@ -2,3 +2,22 @@
   margin: 0;
   padding: 0;
 }
+
+#meme-image-container {
+  width: 400px;
+  position: relative;
+}
+
+.meme-image {
+  z-index: 1;
+  width: inherit;
+}
+
+.meme-text {
+  position: absolute;
+  z-index: 2;
+  max-width: 400px;
+  height: inherit;
+  word-wrap: break-word;
+}
+
