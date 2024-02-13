@@ -15,6 +15,17 @@
   background-color: green;
 }
 
+.default-templates-container {
+  display: flex;
+}
+
+.default-templates-container img {
+  border: 1px solid black;
+  margin-right: 8px;
+  width: 100px;
+  height: 80px;
+}
+
 #meme-image-container {
   background-color: white;
   border: 1px solid black;

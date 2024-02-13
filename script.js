@@ -5,6 +5,7 @@ const memeContainer = document.getElementById('meme-image-container');
 const fireBtn = document.getElementById('fire');
 const waterBtn = document.getElementById('water');
 const earthBtn = document.getElementById('earth');
+const memeTemplatesContainer = document.querySelector('.default-templates-container');
 
 const firePreviewBorder = () => {
   fireBtn.addEventListener('click', () => {
@@ -34,6 +35,18 @@ const loadMemePreview = () => {
   });
 };
 
+const loadTemplatePreview = () => {
+  memeTemplatesContainer.addEventListener('click', (event) => {
+    const clickedMeme = event.target.closest('img');
+    if (!clickedMeme) return;
+    const memeImage = document.getElementById('meme-image');
+    memeImage.src = clickedMeme.src;
+    memeImage.onload = () => {
+      URL.revokeObjectURL(memeImage.src);
+    };
+  });
+};
+
 const getMemeText = () => {
   textInput.addEventListener('keyup', () => {
     memeText.innerText = textInput.value;
@@ -45,3 +58,4 @@ loadMemePreview();
 firePreviewBorder();
 waterPreviewBorder();
 earthPreviewBorder();
+loadTemplatePreview();
