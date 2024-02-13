@@ -3,6 +3,18 @@
   padding: 0;
 }
 
+#fire {
+  background-color: red;
+}
+
+#water {
+  background-color: blue;
+}
+
+#earth {
+  background-color: green;
+}
+
 #meme-image-container {
   background-color: white;
   border: 1px solid black;
@@ -19,6 +31,7 @@
 }
 
 .meme-text {
+  padding-left: 8px;
   position: absolute;
   z-index: 2;
   max-width: 400px;
